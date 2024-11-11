@@ -30,7 +30,7 @@ This repository contains implementations of linked list data structures in Pytho
 - **File**: `Queue.py`
 - **Description**: Implements a queue data structure with basic operations like `enqueue`, `dequeue`, and `peek`. The queue operates on a First-In-First-Out (FIFO) basis.
 
-![alt text](img/stk_que.png.png)
+![alt text](img/stk_que.png)
 
 ## Usage
 
