@@ -16,15 +16,17 @@ This repository contains implementations of linked list data structures in Pytho
 ### Singly Linked List (SLL)
 - **File**: `SinglyLinkedList.py`
 - **Description**: Implements a singly linked list with basic operations: Insert at start pos, end pos and desired pos; Deletion at start pos, end pos and desried pos; Traversal .
-
+![alt text](img/sll_img.png)
 
 ### Doubly Linked List (DLL)
 - **File**: `DoublyLinkedList.py`
 - **Description**: Implements a doubly linked list with enhanced functionality, having following operations: Insert at start pos, end pos and desired pos; Deletion at start pos, end pos and desried pos; Traversal from both pos .
+![alt text](img/dll_img.png.png)
 
 ### Stack
 - **File**: `Stack.py`
 - **Description**: Implements a stack data structure with basic operations like `push`, `pop`, and `peek`. The stack operates on a Last-In-First-Out (LIFO) basis.
+![alt text](img/stack.png.png)
 
 ## Usage
 
