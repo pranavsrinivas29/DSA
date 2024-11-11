@@ -7,9 +7,8 @@ This repository contains implementations of linked list data structures in Pytho
 
 - `SinglyLinkedList.py`: Contains the implementation of a singly linked list (SLL), where each node points to the next node in the sequence.
 - `DoublyLinkedList.py`: Contains the implementation of a doubly linked list (DLL), where each node has pointers to both the next and previous nodes.
-
 - `Stack.py`: Contains the implementation of a stack, which follows the Last-In-First-Out (LIFO) principle.
-
+- `Queue.py`: Contains the implementation of a queue, which follows the First-In-First-Out (FIFO) principle.
 
 ## Features
 
@@ -26,7 +25,12 @@ This repository contains implementations of linked list data structures in Pytho
 ### Stack
 - **File**: `Stack.py`
 - **Description**: Implements a stack data structure with basic operations like `push`, `pop`, and `peek`. The stack operates on a Last-In-First-Out (LIFO) basis.
-![alt text](img/stack.png)
+
+### Queue
+- **File**: `Queue.py`
+- **Description**: Implements a queue data structure with basic operations like `enqueue`, `dequeue`, and `peek`. The queue operates on a First-In-First-Out (FIFO) basis.
+
+![alt text](img/stk_que.png.png)
 
 ## Usage
 
