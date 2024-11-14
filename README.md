@@ -9,12 +9,14 @@ This repository contains implementations of linked list data structures in Pytho
 - `DoublyLinkedList.py`: Contains the implementation of a doubly linked list (DLL), where each node has pointers to both the next and previous nodes.
 - `Stack.py`: Contains the implementation of a stack, which follows the Last-In-First-Out (LIFO) principle.
 - `Queue.py`: Contains the implementation of a queue, which follows the First-In-First-Out (FIFO) principle.
+- `BST.py`: Contains the implementation of a binary search tree, allowing efficient insertion, deletion, and search operations based on the properties of a binary tree.
 
 ## Features
 
 ### Singly Linked List (SLL)
 - **File**: `SinglyLinkedList.py`
 - **Description**: Implements a singly linked list with basic operations: Insert at start pos, end pos and desired pos; Deletion at start pos, end pos and desried pos; Traversal .
+
 ![alt text](img/sll_img.png)
 
 ### Doubly Linked List (DLL)
@@ -31,6 +33,31 @@ This repository contains implementations of linked list data structures in Pytho
 - **Description**: Implements a queue data structure with basic operations like `enqueue`, `dequeue`, and `peek`. The queue operates on a First-In-First-Out (FIFO) basis.
 
 ![alt text](img/stk_que.png)
+
+### Binary Search Tree (BST)
+- **File**: `BST.py`
+- **Description**: Implements a binary search tree (BST) data structure with basic operations like `insert`, `delete`, and `search`. In a BST, each node has a maximum of two children, with the left child containing values less than the parent node and the right child containing values greater than the parent node.
+
+![alt text](img/BST.png)
+
+#### Tree Traversal Methods
+Traversal methods are essential for accessing the elements of a tree in a specific order. Here are three common traversal methods implemented in the BST:
+
+- **In-Order Traversal**: 
+  - Visits nodes in ascending order for a binary search tree.
+  - **Order**: Left subtree → Root → Right subtree.
+  - **Use Case**: Produces a sorted list of elements from the tree.
+
+- **Pre-Order Traversal**: 
+  - Visits the root before its subtrees.
+  - **Order**: Root → Left subtree → Right subtree.
+  - **Use Case**: Used to create a copy of the tree or to serialize the tree structure.
+
+- **Post-Order Traversal**: 
+  - Visits the root after its subtrees.
+  - **Order**: Left subtree → Right subtree → Root.
+  - **Use Case**: Useful for deleting nodes or evaluating expression trees.
+
 
 ## Usage
 
