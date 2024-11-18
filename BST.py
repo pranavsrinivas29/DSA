@@ -115,6 +115,50 @@ class BinarySearchTree:
         _postorder_recursive(self.root)
         print()
 
+    def delete(self,key):
+        """Delete a key from BST"""
+        self.root=self._delete_recursive(self.root, key)
+    
+    def _delete_recursive(self,node, key):
+        if node is None:
+            return node
+        
+        #Locate the node to delete
+        if key < node.key:
+            node.left = self._delete_recursive(node.left, key)
+        
+        elif key> node.key:
+            node.right = self._delete_recursive(node.right, key)
+            
+        else:
+            #Case 1: Node with no children
+            if node.left is  None and node.right is None:
+                return None
+            
+            #Case 2: Node has only 1 child
+            if node.left is None:
+                return node.right
+            
+            elif node.right is None:
+                return node.left
+            
+            #Case 3: Node with two children
+            #Find the inorder sucessor(smallest in the right subtree)
+            # Alternative is to find largest in the left subtree
+            sucessor = self._find_min(node.right)
+            node.key = sucessor.key
+            # Delete the inorder successor
+            node.right = self._delete_recursive(node.right, sucessor.key)
+
+        return node
+    
+    def _find_min(self, node):
+        """Find the node with the smallest key in a subtree."""
+        current = node
+        while current.left is not None:
+            current = current.left
+        return current
+
 
 # Example usage
 bst = BinarySearchTree()
@@ -123,11 +167,25 @@ keys = [15, 10, 20, 8, 12, 17, 25]  # Elements to insert
 for key in keys:
     bst.insert(key)
 
-print("Inorder traversal of the BST after insertions:")
-bst.inorder_traversal()  
 
 print("Pre-order traversal of the BST after insertions:")
 bst.preorder_traversl()
 
 print("Post-order traversal of the BST after insertions:")
 bst.postorder_traversl()
+
+print("Inorder traversal of the BST after insertions:")
+bst.inorder_traversal()  
+
+# Delete cases
+bst.delete(8)   # Leaf node
+print("After deleting 8 (leaf node):")
+bst.inorder_traversal()
+
+bst.delete(10)  # Node with one child
+print("After deleting 10 (one child):")
+bst.inorder_traversal()
+
+bst.delete(15)  # Node with two children
+print("After deleting 15 (two children):")
+bst.inorder_traversal()

@@ -1,7 +1,7 @@
 # DSA
 # Data Structures - Linked Lists
 
-This repository contains implementations of linked list data structures in Python, specifically the **Singly Linked List** and **Doubly Linked List**.
+This repository contains implementations of fundamental data structures in Python, specifically the **Binary Search Tree (BST)** along with previous implementations of **Queue**, **Stack**, **Singly Linked List**, and **Doubly Linked List**.
 
 ## Files
 
