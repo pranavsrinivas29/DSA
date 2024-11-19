@@ -64,6 +64,8 @@ Traversal methods are essential for accessing the elements of a tree in a specif
 - **Description**: Implements a directed graph using adjacency lists or matrices. Supports operations like adding vertices, adding edges, and performing graph traversals.
 - **Commit Message**: "Directed Graph commit"
 
+![alt text](img/dir_graph.png)
+
 #### Graph Traversal Methods
 Graph traversal methods are used to explore all nodes in a graph systematically.
 
