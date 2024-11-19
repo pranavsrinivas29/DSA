@@ -1,3 +1,5 @@
+from collections import deque
+
 class DirectedGraph:
     def __init__(self) -> None:
         self.adjacency_list = {}
@@ -35,6 +37,43 @@ class DirectedGraph:
         out_degrees = {vertex: len(neighbors) for vertex, neighbors in self.adjacency_list.items()}
         return out_degrees
     
+    def bfs(self, start_node):
+        """Perform BFS traversal starting from a given vertex."""
+        visited = set()
+        queue = deque([start_node])
+        visited.add(start_node)
+        
+        while queue:
+            current = queue.popleft()  # Dequeue the front vertex
+            print(current, end=" ")  # Visit the vertex
+
+            
+            #Enqueue all visited nodes
+            for neighbour in self.adjacency_list[current]:
+                if neighbour not in visited:
+                    visited.add(neighbour)
+                    queue.append(neighbour)
+            
+            print()      
+            
+                
+    def dfs(self, start_node):
+        """Perform DFS traversal starting from a given vertex."""
+        visited = set()
+        print("DFS Traversal:", end=" ")
+        self._dfs_recursive(start_node, visited)
+        print()
+
+    def _dfs_recursive(self, vertex, visited):
+        """Recursive helper function for DFS."""
+        if vertex not in visited:
+            print(vertex, end=" ")  # Visit the vertex
+            visited.add(vertex)
+
+            for neighbor in self.adjacency_list[vertex]:
+                self._dfs_recursive(neighbor, visited)
+
+            
     
 # Create a directed graph
 graph = DirectedGraph()
@@ -53,3 +92,12 @@ graph.display()
 # Calculate and display in-degree and out-degree
 print("\nIn-Degree of vertices:", graph.in_degree())
 print("Out-Degree of vertices:", graph.out_degree())
+
+
+# Perform BFS Traversal
+print("\nBFS Traversal starting from A:")
+graph.bfs("A")
+
+# Perform DFS Traversal
+print("\nDFS Traversal starting from A:")
+graph.dfs("A")

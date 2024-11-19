@@ -1,7 +1,7 @@
 # DSA
 # Data Structures - Linked Lists
 
-This repository contains implementations of fundamental data structures in Python, specifically the **Binary Search Tree (BST)** along with previous implementations of **Queue**, **Stack**, **Singly Linked List**, and **Doubly Linked List**.
+This repository contains implementations of fundamental data structures in Python, including **Directed Graphs** and traversal methods such as **Breadth-First Search (BFS)**, **Depth-First Search (DFS)**, as well as **in-order** and **out-order** traversals. It also includes other data structures like **Binary Search Tree (BST)**, **Queue**, **Stack**, **Singly Linked List**, and **Doubly Linked List**.
 
 ## Files
 
@@ -10,6 +10,7 @@ This repository contains implementations of fundamental data structures in Pytho
 - `Stack.py`: Contains the implementation of a stack, which follows the Last-In-First-Out (LIFO) principle.
 - `Queue.py`: Contains the implementation of a queue, which follows the First-In-First-Out (FIFO) principle.
 - `BST.py`: Contains the implementation of a binary search tree, allowing efficient insertion, deletion, and search operations based on the properties of a binary tree.
+- `DirectedGraph.py`: Contains the implementation of a directed graph and traversal methods like BFS, DFS, in-order, and out-order.
 
 ## Features
 
@@ -58,8 +59,34 @@ Traversal methods are essential for accessing the elements of a tree in a specif
   - **Order**: Left subtree → Right subtree → Root.
   - **Use Case**: Useful for deleting nodes or evaluating expression trees.
 
+### Directed Graph
+- **File**: `DirectedGraph.py`
+- **Description**: Implements a directed graph using adjacency lists or matrices. Supports operations like adding vertices, adding edges, and performing graph traversals.
+- **Commit Message**: "Directed Graph commit"
+
+#### Graph Traversal Methods
+Graph traversal methods are used to explore all nodes in a graph systematically.
+
+- **In-Order Traversal (Directed Graph Context)**:
+  - Visits a vertex after visiting all its incoming edges.
+  - **Order**: Incoming edges → Vertex → Outgoing edges.
+
+- **Out-Order Traversal (Directed Graph Context)**:
+  - Visits a vertex before visiting all its outgoing edges.
+  - **Order**: Vertex → Outgoing edges → Other vertices.
+
+- **Breadth-First Search (BFS)**:
+  - Explores all neighbors of a vertex before moving to their neighbors.
+  - **Order**: Level-wise traversal from the source vertex.
+
+- **Depth-First Search (DFS)**:
+  - Explores as far as possible along one branch before backtracking.
+  - **Order**: Traversal dives deep into branches and backtracks to explore other branches.
 
 ## Usage
 
 Clone the repository and run the files in a Python environment to interact with the linked list implementations. Each file contains methods to initialize, insert, delete, and traverse the lists.
 
+## Images 
+   - **Source**: [WikiMedia](https://commons.wikimedia.org/)  
+   
